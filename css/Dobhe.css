@@ -1,0 +1,120 @@
+#a {
+	background: url(../img/2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+.person{
+	width: 80%;
+	height: 80%;
+	border-radius: 5px;
+	display: flex;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	background-color: rgba(19, 15, 64,0.2);
+	color: aliceblue;
+	font: italic 1em Verdana, serif;
+}
+.person_left{
+	margin-left: 10%;
+	padding-right: 10%;
+	display: flex;
+	flex-direction: column;
+	flex: 3;
+}
+.person_left_top,
+.person_left_center,
+.person_left_bottom{
+	line-height: 1.5em;
+	padding-left: 10px;
+	margin-top: 20px;
+}
+.person_left_top{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-left: 3px pink solid;
+}
+/* .person_left_center{
+	flex: 5;
+} */
+.contact{
+	text-indent: 3em;
+}
+.person_left_bottom{
+	flex: 3;
+	font-size: 1.2em;
+	text-indent: 2.4em;
+}
+
+.person_right{
+	margin-right: 5%;
+	margin-top: 20px;
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.person_right_top{
+	flex: 1;
+	position: relative;
+}
+.person_right_top>video{
+	border-radius: 5px;
+	position: absolute;
+	height: 80%;
+	opacity: 0.8;
+}
+.person_right_bottom{
+		flex: 3;
+		line-height: 2em;
+}
+.skill{
+	display: flex;
+	flex-wrap: wrap;
+}
+.skill>div{
+	width: 40%;
+	height: 24px;
+	margin-top: 5px;
+	margin-left: 1em;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 2px;
+	background: rgba(251, 194, 235,0.2);
+}
+/* 动画制作边框特效 */
+.person::after{
+	content: '';
+	position: absolute;
+	bottom: 1px;
+	border-radius: 1px;
+	width: 100%;
+	height: 2px;
+	background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+	animation: an_border 10s linear 0s infinite normal;
+}
+@keyframes an_border{
+	0%{
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	50%{
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	50.1%{
+		transform: scaleX(1);
+		transform-origin: right;
+	}
+	100%{
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+canvas{
+	/* position: absolute; */
+	
+}

@@ -1,0 +1,47 @@
+* {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	/* 文本无法选中 */
+	-webkit-user-select: none;
+}
+/* 隐藏滚动条 谷歌，IE，火狐*/
+*::-webkit-scrollbar { width: 0 !important }
+* { -ms-overflow-style: none; }
+*{ overflow: -moz-scrollbars-none; }
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+/* 滑条样式美化 */
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 5px;
+}
+
+/* 滚动贴合 */
+.container {
+	scroll-snap-type: y mandatory;
+	overflow: auto;
+	height: 100vh;
+	width: 100vw;
+	scroll-behavior: smooth;
+}
+
+section {
+	scroll-padding: 100px;
+	scroll-snap-align: start;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
